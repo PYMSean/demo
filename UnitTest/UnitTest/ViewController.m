@@ -9,9 +9,8 @@
 #import "ViewController.h"
 
 #import "FMDB.h"
-
-
-@interface ViewController ()
+#import <WebKit/WebKit.h>
+@interface ViewController ()<WKNavigationDelegate,WKScriptMessageHandler>
 
 
 
@@ -29,6 +28,42 @@
 
 - (void)coreAnimationTest{
     
+    
+    WKWebViewConfiguration * config = [[WKWebViewConfiguration alloc] init];
+    
+    WKWebView * webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+    
+    webView.navigationDelegate = self;
+    [self.view addSubview:webView];
+    
+    NSURL * url = [NSURL URLWithString:@"www.baidu.com"];
+    
+    
+    
+    //oc调用js
+    [webView evaluateJavaScript:@"show()" completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        //
+    }];
+    
+    //圆角优化1
+    //bezier + coreGraphics
+    
+    UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    
+    imageView.image = [UIImage imageNamed:@"13292147871168.jpg"];
+    imageView.layer.borderColor = [UIColor purpleColor].CGColor;
+    imageView.layer.borderWidth = 1;
+    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1);
+    [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds cornerRadius:imageView.frame.size.width] addClip];
+    [imageView drawRect:imageView.bounds];
+    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.view addSubview:imageView];
+    
+    
+    
+    
+    return;
     
     UIView * demoView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     demoView.backgroundColor = [UIColor greenColor];
@@ -58,6 +93,7 @@
     
     keyFrameAnimation.autoreverses = YES;
     [demoView.layer addAnimation:keyFrameAnimation forKey:@"keyFrameRotation"];
+    
     
 }
 - (void)viewDidLoad {

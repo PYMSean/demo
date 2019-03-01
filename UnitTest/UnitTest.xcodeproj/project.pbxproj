@@ -15,6 +15,7 @@
 		38345F80221A56DB009104C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38345F7F221A56DB009104C6 /* main.m */; };
 		38345F8A221A56DB009104C6 /* UnitTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38345F89221A56DB009104C6 /* UnitTestTests.m */; };
 		38345F98221A5A4F009104C6 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38345F97221A5A4F009104C6 /* libOCMock.a */; };
+		38CB38C522250C8F00E1274F /* 13292147871168.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 38CB38C422250C8F00E1274F /* 13292147871168.jpg */; };
 		D2694BED36C5C80D5B08D3FB /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4746D20463514BB73EA124A7 /* libPods-UnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		38345F8B221A56DB009104C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38345F95221A56FE009104C6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		38345F97221A5A4F009104C6 /* libOCMock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libOCMock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		38CB38C422250C8F00E1274F /* 13292147871168.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13292147871168.jpg; sourceTree = "<group>"; };
 		4746D20463514BB73EA124A7 /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67857C3BEEAA6C11346D287A /* Pods-UnitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTest/Pods-UnitTest.release.xcconfig"; sourceTree = "<group>"; };
 		791DDF79A1BB2715A9E49A5D /* Pods-UnitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTest/Pods-UnitTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		38345F64221A56D8009104C6 = {
 			isa = PBXGroup;
 			children = (
+				38CB38C422250C8F00E1274F /* 13292147871168.jpg */,
 				38345F6F221A56D8009104C6 /* UnitTest */,
 				38345F88221A56DB009104C6 /* UnitTestTests */,
 				38345F6E221A56D8009104C6 /* Products */,
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38345F7D221A56DB009104C6 /* LaunchScreen.storyboard in Resources */,
+				38CB38C522250C8F00E1274F /* 13292147871168.jpg in Resources */,
 				38345F7A221A56DB009104C6 /* Assets.xcassets in Resources */,
 				38345F78221A56D8009104C6 /* Main.storyboard in Resources */,
 			);
